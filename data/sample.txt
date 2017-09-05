@@ -1,0 +1,17 @@
+As an example we’ll use the domain of searching for restaurants. We’ll start with an extremely simple model of those conversations. You can build up from there.
+Let’s assume that anything our bot’s users say can be categorized into one of the following intents:
+greet
+restaurant_search
+thankyou
+Of course there are many ways our users might greet our bot:
+Hi!
+Hey there!
+Hello again :)
+And even more ways to say that you want to look for restaurants:
+Do you know any good pizza places?
+I’m in the North of town and I want chinese food
+I’m hungry
+The first job of rasa NLU is to assign any given sentence to one of the intent categories: greet, restaurant_search, or thankyou.
+The second job is to label words like “Mexican” and “center” as cuisine and location entities, respectively. In this tutorial we’ll build a model which does exactly that.
+Preparing the Training Data
+The training data is essential to develop chatbots. It should include texts to be interpreted and the structured data (intent/entities) we expect chatbots to convert the texts into. The best way to get training texts is from real users, and the best way to get the structured data is to pret
