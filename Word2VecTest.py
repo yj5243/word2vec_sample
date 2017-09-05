@@ -8,17 +8,17 @@ from gensim.models import Word2Vec
 # ------------------------------
 # -- 문장별 Word2Vec 처리
 # ------------------------------
-model = Word2Vec.load("model/all_wiki_jira_landNews_doc2vec.model.model")
+model = Word2Vec.load("model/moby_doc2vec.model")
 print("<model", "_" * 100)
 print(model)
 print("<model", "_" * 100)
 
 print("-"*100)
-for word, score in model.most_similar(positive=["하나"] ):
+for word, score in model.most_similar(positive=["whale"] ):
     print(word)
 
 print("-"*100)
-for word, score in model.most_similar(positive=["1"] ):
+for word, score in model.most_similar(positive=["fish"] ):
     print(word)
 
 
