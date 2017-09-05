@@ -9,7 +9,7 @@ from gensim.models import Word2Vec
 # -- 파일 읽기
 # ------------------------------
 # file = open("data/all_wiki_jira_landNewstitle.txt", "r", encoding='utf8')
-file = open("data/all_wiki_jira_landNewstitle.data", "r", encoding='utf8')
+file = open("data/moby.txt", "r", encoding='utf8')
 moby_dick = file.read()
 print(moby_dick)
 
@@ -64,13 +64,13 @@ print("<model", "_" * 100)
 print(model)
 print("<model", "_" * 100)
 
-model.save("doc2vec.model")
+model.save("model/moby_doc2vec.model")
 print("-"*100)
-for word, score in model.most_similar("타이틀"):
+for word, score in model.most_similar("whale"):
     print(word)
 
 print("-"*100)
-for word, score in model.most_similar("제목"):
+for word, score in model.most_similar("fish"):
     print(word)
 
 
